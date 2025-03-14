@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Get the source code of this repositorie...
+        uses: actions/checkout@main
+  
 
       - name: Load Configuration
         uses: falti/dotenv-action@v0.2.5
