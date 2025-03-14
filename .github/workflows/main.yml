@@ -11,8 +11,11 @@ jobs:
     steps:
       - name: Get the source code of this repositorie...
         uses: actions/checkout@main
-  
 
+      - name: Get variable configuration...
+        run: |
+          echo "BUILD_TIME=$(date +%s | md5sum | awk '{print substr($1,1,10)}')" >> $GITHUB_ENV
+          
       - name: Load Configuration
         uses: falti/dotenv-action@v0.2.5
         id: config
